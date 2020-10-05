@@ -1,4 +1,4 @@
-class UserInput {
+class userInput {
     constructor() {
         this.componentData = {
             person: {

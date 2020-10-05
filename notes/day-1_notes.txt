@@ -12,3 +12,14 @@ Nods JS/NPM
 
 Component
 Element
+
+React JS:
+component--> return element (design/string/number/object/array)
+component might contain its own data
+component with own data: stateful component
+component without own data: stateless/presentational component
+
+component: simple function/function constructor with data and logic to change data along with function to return element (design/string/number/object/array)
+
+design+data
+
