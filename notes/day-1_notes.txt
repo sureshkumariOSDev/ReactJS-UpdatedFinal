@@ -1,0 +1,11 @@
+JS - prototype
+new features
+
+react:
+create react app without tool
+create react app using create-react-app
+
+react concepts
+
+Visual Studio Code
+Nods JS/NPM
