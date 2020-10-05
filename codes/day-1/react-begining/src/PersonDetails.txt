@@ -1,0 +1,35 @@
+import React from 'react'
+//component: personDetails
+//element: nameSpan
+function PersonDetails(data) {
+    //pseudo HTML element
+    var detail = data.fname + ' ' + data.lname;
+    //<span id='' class='' style=''>detail</span>
+    var nameSpan = React.createElement(
+        'span',
+        {
+            id: 'detailSpan',
+            style: { backgroundColor: 'lime', fontSize: 'medium' }
+        },
+        detail);
+    /**
+     * {
+     *  type:'span',
+     *  key:null,
+     *  ref:null,
+     *  props:{
+     *      id:'detailSpan',
+     *      style:{backgroundColor: 'lime', fontSize: 'medium'}
+     *      children:[detail]
+     *  }
+     * }
+     */
+    // nameSpan.innerHTML = data.fname + ' ' + data.lname;
+    return nameSpan;
+}
+
+function test() {
+    return 'Hi...';
+}
+
+export { PersonDetails, test };

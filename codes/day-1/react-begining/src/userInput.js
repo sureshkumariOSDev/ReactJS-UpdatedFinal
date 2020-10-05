@@ -1,3 +1,5 @@
+import React from 'react'
+
 class UserInput {
     constructor() {
         this.componentData = {

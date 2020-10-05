@@ -1,5 +1,6 @@
 //component: app
 //element: completeDesign
+import React from 'react'
 function App() {
     //var userInputElement = userInput();
     // var personDetailElement = personDetails();
@@ -8,8 +9,8 @@ function App() {
     var userInputElement = userInputComponentObj.render();
 
     //pseudo HTML element
-    var completeDesign = document.createElement('div');
-    completeDesign.appendChild(userInputElement);
+    // var completeDesign = React.createElement('div');
+    // completeDesign.appendChild(userInputElement);
     //completeDesign.appendChild(personDetailElement);
     return completeDesign;
 }

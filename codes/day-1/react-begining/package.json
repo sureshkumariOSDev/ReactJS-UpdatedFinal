@@ -1,0 +1,24 @@
+{
+  "name": "react-begining",
+  "version": "1.0.0",
+  "description": "simple react app",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joydip-git/verizon-reactjs-5thOctober2020.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "joydip",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joydip-git/verizon-reactjs-5thOctober2020/issues"
+  },
+  "homepage": "https://github.com/joydip-git/verizon-reactjs-5thOctober2020#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
