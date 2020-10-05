@@ -9,3 +9,6 @@ react concepts
 
 Visual Studio Code
 Nods JS/NPM
+
+Component
+Element

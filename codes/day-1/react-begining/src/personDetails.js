@@ -1,5 +1,6 @@
-function personDetails() {
+//component: personDetails
+function personDetails(data) {
     var nameSpan = document.createElement('span');
-    nameSpan.innerHTML = 'person details';
+    nameSpan.innerHTML = data.fname + ' ' + data.lname;
     return nameSpan;
 }
