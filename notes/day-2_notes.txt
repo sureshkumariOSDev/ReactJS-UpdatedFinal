@@ -58,8 +58,26 @@ files (images): file-loader
 html-webpack-plugin
 clean-webpack-plugin
 
+serve, http-server
+>serve <dir-name> -p <port-number>
+
+move inside the distributable
+>http-server (http://127.0.01:8080)
 
 npm i create-react-app -g
+
+create-react-app react-first
+
+npx create-react-app react-first
+
+flow: static type checker for JS
+package - preset for babel: [@babel/preset-flow] ==> npm i @babel/preset-flow --save-dev
+package (flow): npm i flow-bin --save-dev
+create a script in package.json file
+"flow":"flow"
+
+create a .flowconfig file: use ==> npm run flow init (only one time)
+run flow: npm run flow
 
 
 
