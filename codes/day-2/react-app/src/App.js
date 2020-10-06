@@ -3,14 +3,15 @@ import Welcome from './Welcome'
 //import './App.css'
 
 const App = () => {
-    const welcomeElement = Welcome();
-    console.log(welcomeElement)
+    // const welcomeElement = Welcome();
+    // console.log(welcomeElement)
     //<div id=''><span id=''>Hello to React</span></div>
     // const appElement = createElement('div', { id: 'mainDiv' }, welcomeElement);
     const appElement =
         (
             <div id='mainDiv'>
-                {welcomeElement}
+                { /* {welcomeElement}*/}
+                <Welcome />
             </div>
         );
     return appElement;

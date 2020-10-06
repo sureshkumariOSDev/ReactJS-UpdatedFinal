@@ -54,6 +54,13 @@ CSS: css-loader, style-loader
 html: html-loader
 files (images): file-loader
 
+5. webpack plugins:
+html-webpack-plugin
+clean-webpack-plugin
+
+
+npm i create-react-app -g
+
 
 
 
