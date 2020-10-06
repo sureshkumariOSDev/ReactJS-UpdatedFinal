@@ -79,6 +79,12 @@ create a script in package.json file
 create a .flowconfig file: use ==> npm run flow init (only one time)
 run flow: npm run flow
 
+diffing algorithm
+
+compare the old react element with new react element
+
+
+
 
 
 
