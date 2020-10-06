@@ -21,3 +21,44 @@ Node JS
 AMD, ES6 module
 
 module loader: RequireJS, SystemJS,...
+
+
+components:
+normal JS function: No question of creating an instance--> functional coponent (presentational/ stateless)
+constructor function (class): there is an instance involved (component/created based on the function ctor call) -- class component (stateful component)
+
+elements: 
+return value of function itself (functional component) or 
+return value of built-in (inherited) "render" function (class component)
+
+React Application:
+1. React App Creation:
+packages: react, react-dom
+
+2. Transpilation and Compilation:
+Code: JS
+a. ES6 features: codes need to be converted back to old/vanilla JS (ES5, ES3, ES2<ES6)
+b. JSX (React JS): codes needed to be converted back to JS
+transpiler and compiler: Babel
+packages: @babel/core (compilation), @babel/preset-env (transpilation), @babel/preset-react (JSX conversion to JS)
+command line interface tool: @babel/cli
+plugins or presets - transpilation: @babel/preset-env
+plugins or presets - JSX to JS conversion: @babel/preset-react
+
+3. Bundler:
+webpack: webpack, webpack-cli
+
+4. Webpack Loaders:
+JS: babel-loader
+CSS: css-loader, style-loader
+html: html-loader
+files (images): file-loader
+
+
+
+
+
+
+
+
+
