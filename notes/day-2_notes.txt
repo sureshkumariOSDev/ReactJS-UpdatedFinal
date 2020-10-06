@@ -1,0 +1,23 @@
+prototype
+es6
+class, extends, super etc.
+arrow operator
+const
+let
+spread operator
+templated string
+static method
+object destructuring
+etc.
+
+web/desktop
+
+module: file with different exportable members
+module formatter: how to define your module and its exportable members
+Ex. CommonJS, ES6 module format, AMD, UMD,...
+
+Node JS
+
+AMD, ES6 module
+
+module loader: RequireJS, SystemJS,...
