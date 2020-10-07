@@ -1,10 +1,19 @@
-import React, { Component } from 'react'
+import React, { Component, PureComponent } from 'react'
 
-export default class PersonDetail extends Component {
+export default class PersonDetail extends PureComponent {
     constructor() {
         super()
         console.log('[PersonDetail] created')
     }
+    // shouldComponentUpdate(newProps, newState) {
+    //     console.log('[PersonDetail] should update????')
+    //     // console.log(newProps)
+    //     // console.log(this.props)
+    //     if (this.props.person === newProps.person)
+    //         return false;
+    //     else
+    //         return true;
+    // }
     render() {
         console.log('[PersonDetail] rendered')
         let { person, changePerson } = this.props;

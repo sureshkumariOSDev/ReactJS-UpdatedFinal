@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-export default function PersonTable({ people, selectPerson }) {
+function PersonTable({ people, selectPerson }) {
+    console.log('[PersonTable] rendered')
     return (
         <div>
             <table>
@@ -28,6 +29,8 @@ export default function PersonTable({ people, selectPerson }) {
         </div>
     )
 }
+
+ export default memo(PersonTable);
 
 /**
  * {
