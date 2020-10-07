@@ -3,7 +3,16 @@ import React, { Component } from 'react'
 export default class DepartmentDetail extends Component {
     constructor() {
         super()
+        this.state = {
+            x: 0
+        }
         console.log('[DepartmentDetail] created')
+    }
+    static getDerivedStateFromProps(newProps, initialState) {
+        console.log('[DepartmentDetail] getDerivedStateFromProps')
+        return {
+            x: initialState.x + newProps.data
+        };
     }
     shouldComponentUpdate(newProps, newState) {
         console.log('[DepartmentDetail] should update????')
@@ -26,7 +35,7 @@ export default class DepartmentDetail extends Component {
                     name='name'
                     onChange={(e) => changeDept(dept.id, 'name', e.target.value)}
 
-                />
+                />                
             </div>
         )
     }

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import ErrorBoundary from '../components/ErrorBoundary';
+import Hero from '../components/Hero';
 import PersonData from '../components/PersonData';
 import './App.css';
 
@@ -42,10 +44,15 @@ function App() {
   }
   return (
     <div className="App">
+      
       <button onClick={updateShowHandler}>ShowOrHide</button>
-      {
+       {
         showState ? <PersonData /> : 'NA'
       }
+      {/* <ErrorBoundary> */}
+      <Hero heroName={'Batman'} />
+      {/* <Hero heroName={'Joker'} /> */}
+      {/* </ErrorBoundary> */}
     </div>
   );
 }

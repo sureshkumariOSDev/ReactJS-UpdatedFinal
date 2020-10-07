@@ -1,0 +1,57 @@
+int x = 10;
+boolean b = false;
+b = 30;
+
+var b = false;
+b  = 20;
+
+function add(x,y){
+  return (x+y);
+}
+
+var a = 20;
+var b = 30;
+a = true;
+
+add(a,b);
+
+Flow --> static type checker library
+typescript --> superset of JS and compiler
+
+
+JS --> dynamic type checking
+mix with JS, elevate JS
+
+
+@babel/preset-flow
+"presets":["@babel/preset-flow",....]
+
+npm i flow-bin --save-dev
+
+
+creation - mounting:
+a. constructor: DON'T RestFul API, network calls
+this.state, this.fn = this.fn.bind(this)
+state={}
+b. getDerivedStateFromProps(newProps,oldState) (static)
+c. render()
+d. componentDidMount(){this.setState({});}
+
+updation stage:
+a. getDerivedStateFromProps (static)
+b. shouldComponentUpdate(newProps,newState)
+c. render()
+d. getSnapshotBeforeUpdate(oldProps,oldState)
+e. componentDidUpdate(oldProps,oldState,snapshot)
+
+destruction:
+componentWillUnmount()
+
+
+error:
+getDerivedStateFromError(error,oldState)
+componentDidCatch(error,info)
+
+deprecated events:
+
+
