@@ -33,6 +33,9 @@ export default class PersonData extends Component {
             </div>
         )
     }
+    componentDidUpdate() {
+        console.log('[PersonData] updated')
+    }
     componentDidMount() {
         console.log('[PersonData] mounted')
     }

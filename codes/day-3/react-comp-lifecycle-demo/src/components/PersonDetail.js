@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 export default class PersonDetail extends Component {
-    constructor(){
+    constructor() {
         super()
         console.log('[PersonDetail] created')
     }
@@ -11,17 +11,20 @@ export default class PersonDetail extends Component {
         return (
             <div>
                 Name:&nbsp;<input type='text' value={person.name} />
-                <br/>
+                <br />
                 Number:&nbsp;<input type='text' value={person.mobile} />
-                <br/>
+                <br />
                 <button>Update</button>
             </div>
         )
-    }    
-    componentDidMount(){
+    }
+    componentDidUpdate() {
+        console.log('[PersonDetail] updated')
+    }
+    componentDidMount() {
         console.log('[PersonDetail] mounted')
     }
-    componentWillUnmount(){
+    componentWillUnmount() {
         console.log('[PersonDetail] unmounted')
     }
 }
