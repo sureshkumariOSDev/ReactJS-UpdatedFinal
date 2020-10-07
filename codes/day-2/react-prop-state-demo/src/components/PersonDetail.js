@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 //props = {personInfo:{firstName:'NA', lastName:'NA'}}
 
-export default function PersonDeail({ updateFirstNameCallback, updateLastNameCallback, personInfo }) {
+export default function PersonDeail({ updateFirstNameCallback, updateLastNameCallback, personInfo, loadingStatus }) {
     console.log('[PD] rendered')
     // const { updateFirstNameCallback, updateLastNameCallback, personInfo } = props;
     const { firstName, lastName } = personInfo;
@@ -15,24 +15,32 @@ export default function PersonDeail({ updateFirstNameCallback, updateLastNameCal
     //     let lastName = e.target.value;
     //     updateLastNameCallback(lastName);
     // }
-    return (
-        <div>
-            FirstName: &nbsp;
-            <input
-                type='text'
-                value={firstName}
-                onChange={(e) => updateFirstNameCallback(e.target.value)} />
-            <br />
+
+    let design = null;
+    if (loadingStatus) {
+        design = 'loading...';
+    }
+    else {
+        design = (
+            <div>
+                FirstName: &nbsp;
+                <input
+                    type='text'
+                    value={firstName}
+                    onChange={(e) => updateFirstNameCallback(e.target.value)} />
+                <br />
             LastName: &nbsp;
-            <input
-                type='text'
-                value={lastName}
-                onChange={(e) => updateLastNameCallback(e.target.value)}
-            />
-            <br />
-            <button>Update</button>
-        </div>
-    );
+                <input
+                    type='text'
+                    value={lastName}
+                    onChange={(e) => updateLastNameCallback(e.target.value)}
+                />
+                <br />
+                <button>Update</button>
+            </div>
+        );
+    }
+    return design;
 }
 
 PersonDeail.propTypes = {
