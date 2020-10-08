@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ProductRow from '../ProductRow/ProductRow'
 
-function ProductList({ productList }) {
+function ProductList({ productList, removeCallback }) {
     return (
         <div className='table-responsive'>
             <table className='table'>
@@ -20,7 +20,10 @@ function ProductList({ productList }) {
                 <tbody>
                     {
                         productList.map(p => {
-                            return <ProductRow product={p} key={p.productId} />
+                            return <ProductRow
+                                product={p}
+                                key={p.productId}
+                                remove={removeCallback} />
                         })
                     }
                 </tbody>
@@ -30,7 +33,8 @@ function ProductList({ productList }) {
 }
 
 ProductList.propTypes = {
-    productList: PropTypes.array.isRequired
+    productList: PropTypes.array.isRequired,
+    removeCallback: PropTypes.func.isRequired
 }
 
 export default ProductList

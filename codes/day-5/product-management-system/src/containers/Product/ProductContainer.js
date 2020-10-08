@@ -7,11 +7,25 @@ export default class ProductContainer extends Component {
     state = {
         products: null
     }
-    componentDidMount() {
+    getData = () => {
         ProductService.getProducts()
             .then((resp) => this.setState({ products: resp.data }))
             .catch(e => console.log(e))
     }
+    componentDidMount() {
+        this.getData();
+    }
+    removeProduct = (productId) => {
+        ProductService.deleteProduct(productId)
+            .then(resp => {
+                if (resp.statusText === 'OK') {
+                    //locally update state by removing the same product
+                    this.getData()
+                }
+            })
+            .catch(e => console.log(e))
+    }
+
     render() {
         const { products } = this.state;
         let design = <span>Loading...</span>;
@@ -22,7 +36,7 @@ export default class ProductContainer extends Component {
                         <h4>{products.length} Record(s) found...</h4>
                     </div>
                     <div className='panel panel-body'>
-                        <ProductList productList={this.state.products} />
+                        <ProductList productList={this.state.products} removeCallback={this.removeProduct} />
                     </div>
                 </div>
             );
