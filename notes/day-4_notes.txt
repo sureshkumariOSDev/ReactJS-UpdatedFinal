@@ -1,0 +1,48 @@
+HOC:
+toggle between a paragraph and input
+
+c1 
+c2
+
+function withExtra(c){
+
+	class WithExtra extends Component{
+		state={
+		  obj:new service()
+		}
+		toggle()=>{}
+		switch()=>{}
+		//applyStyle=()=>{}
+		
+		render(){
+ 			return <c p1={this.toggle} p2={this.state.obj}/>
+		}
+	}
+	return WithExtra;
+}
+
+
+//c1.js
+class C1 extends Component{
+	//own functionalities
+	render(){
+		return (
+			<button onClick={this.props.p1}>Toggle</button>
+		);
+	}
+}
+const enhancedC1 = withExtra(c1);
+
+export default enhancedC1;
+
+
+function C2(props){
+	//own functionalities
+	
+		return (
+			<button onClick={props.p1}>Toggle</button>
+		);
+}
+const enhancedC1 = withExtra(c2);
+
+export default enhancedC2;
