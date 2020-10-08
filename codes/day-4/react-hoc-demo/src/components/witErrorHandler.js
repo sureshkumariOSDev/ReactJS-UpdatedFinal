@@ -14,8 +14,8 @@ function withErrorHandler(logErrorCallback, FallbackComponent, WrappedComponent)
         }
         componentDidCatch(error, info) {
             logErrorCallback(error, info)
-                // .then((resp) => console.log(resp.json()))
-                // .catch();
+            // .then((resp) => console.log(resp.json()))
+            // .catch();
         }
         render() {
             if (this.state.hasError) {

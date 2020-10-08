@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 const withCounter = (WrappedComponent) => {
+    
     class WithCounter extends React.Component {
         state = {
             counter: 0
