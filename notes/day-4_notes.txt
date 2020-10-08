@@ -46,3 +46,14 @@ function C2(props){
 const enhancedC1 = withExtra(c2);
 
 export default enhancedC2;
+
+class Common{}
+
+class C1{}
+
+class C2{}
+
+
+
+
+
