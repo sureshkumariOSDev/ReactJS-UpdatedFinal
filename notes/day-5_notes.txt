@@ -1,0 +1,49 @@
+React Router:
+
+MemoryRouter: 
+	keeps your URL changes in memory. NOT in the browser.
+	It dies not read/write the URLs in the address bar
+	It does not change the URL in the browser
+	No back or forward button in the browser can be used
+	Testing
+	non-broswer environment: React Native
+
+BrowserRouter:
+	It uses HTML5 history API (pushState, replaceState and popState APIs) to keep UIs in sync with the URL
+	Normal URL
+	assumes that as if the request URl is being processed by the server
+	points to the index,html
+	forceRefresh props instead of pushState API in legacy browser
+	this.props/props.history.push('/products')
+	
+HashRouter:
+	uses client-side hash routing
+	http://localhost:3000/#/products
+	# portion of the URL will be used to keep the UI in sync with the URL
+	localhost:3000/#/
+	support the application in legacy broswer
+
+Route, Link, NavLink, Redirect
+
+<Link to={ {
+	pathname:'products',
+	state={}
+} }/>
+
+State management in React Application through Redux
+a. Redux (redux)
+b. Redux - asynchronous call
+	a. redux thunk (redux-thunk)
+	b. redux saga 
+c. react with redux (react-redux)
+
+convert my application using react hook
+useHistory, useMatch, useLocation
+useSelector, useDisptach
+
+dockerize my pms app
+a. create docker image
+b. create docker container and run
+c. push docker image in docker hub
+d. host the docker image from docker hub in azure container
+
